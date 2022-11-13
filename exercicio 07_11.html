@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Homework 1
+    </title>
+</head>
+
+<body>
+    <h1>desafio aula 07_11 </h1>
+</body>
+<script>
+
+    function saoTodosIguas(array) {
+            return array[0] === array[1] && array[1] === array[2]
+        }//função de verificação se os indices do array são iguais
+
+        function jogo() {
+            let array = [2, 1, 2]
+            for (let i = 0; i < array.length; i++) {
+                array[i] = Math.floor(Math.random([i]) * 3) + 1
+            }//laço para sortear o array aleatorio
+
+            if (saoTodosIguas(array)) {
+                if (array[0] === 3) {
+                    console.log("Fim de jogo")
+                } else {
+                    console.log(`porta ${array[0]} aberta!`)
+                }
+            } else {
+                console.log("Tente novamente")
+            }
+        }
+        jogo()
+
+</script>
+</html>
